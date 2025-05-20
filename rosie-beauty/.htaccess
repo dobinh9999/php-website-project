@@ -1,0 +1,36 @@
+# Enable rewrite engine
+RewriteEngine On
+
+# Set the base directory for the rewrite rules
+RewriteBase /
+
+# Redirect all requests to index.php except for existing files or directories
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+
+
+# Prevent directory listing
+Options -Indexes
+
+# Set default character set
+AddDefaultCharset UTF-8
+
+# Enable PHP short tags
+php_flag short_open_tag on
+
+# Set maximum execution time (adjust as needed)
+php_value max_execution_time 30
+
+# Set maximum file upload size (adjust as needed)
+php_value upload_max_filesize 10M
+php_value post_max_size 10M
+
+# Disable server signature
+ServerSignature Off
+
+<IfModule mod_headers.c>
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+</IfModule>

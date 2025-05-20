@@ -1,0 +1,246 @@
+:root {
+    --color-link: #333333;
+    --color-border: #ccc;
+    --btn-hover: #d9534f;
+}
+
+/* sử dụng !important để tránh xung đột với các class khác */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+    scroll-behavior: smooth;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-center-2 {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.max-width {
+    max-width: 100%;
+}
+
+ul li{
+    list-style: none;
+}
+
+ul li a{
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-link);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.f-12 {
+    font-size: 12px;
+}
+
+.f-14 {
+    font-size: 14px;
+}
+
+.f-16 {
+    font-size: 16px;
+}
+
+.f-18 {
+    font-size: 18px;
+}
+
+.f-20 {
+    font-size: 20px;
+}
+
+.f-22 {
+    font-size: 22px;
+}
+
+.f-24 {
+    font-size: 24px;
+}
+
+.f-wt-bold {
+    font-weight: bold;
+}
+
+.border-1 {
+    border: 1px solid #ddd;
+}
+
+.border-radius-10 {
+    border-radius: 10px;
+}
+
+.l-10{
+    left: 10px;
+}
+
+.r-10{
+    right: 10px;
+}
+
+.m-10{
+    margin: 10px;
+}
+
+.ml-10 {
+    margin-left: 10px;
+}
+
+.mr-10 {
+    margin-right: 10px;
+} 
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mr-20 {
+    margin-right: 20px;
+}
+
+.ml-20 {
+    margin-left: 20px;
+}
+
+.p-5 {
+    padding: 5px;
+}
+
+.p-10 {
+    padding: 10px;
+}
+
+.p-20{
+    padding: 20px;
+}
+
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    line-height: 1;
+    z-index: 5;
+    transition: all 0.2s linear;
+}
+
+.slick-arrow:hover {
+    background-color: var(--btn-hover);
+    color: white;
+}
+
+.slick-prev {
+    left: 0;
+    font-size: 12px;
+    width: 25px;
+    height: 40px;
+    border-radius:10px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.slick-next {
+    right: 0;
+    font-size: 12px;
+    width: 25px;
+    height: 40px;
+    border-radius:10px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.slick-dots {
+    position: absolute;
+    list-style: none;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 0 20px;
+}
+
+.slick-dots button {
+    font-size: 0;
+    width: 7px;
+    height: 7px;
+    border-radius: 100rem;
+    background-color: #eee;
+    border: none;
+    outline: none;
+    transition: all 0.2s linear;
+}
+
+.slick-dots .slick-active button {
+    background-color: #2cccff;
+}
+
+#backToTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none; /* Ẩn nút khi chưa cần */
+    background-color: #d16b6b;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+#backToTopBtn:hover {
+    background-color: #bf5151;
+}

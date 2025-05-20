@@ -1,0 +1,91 @@
+.banner-content {
+    align-items: stretch;
+    background-color: #f9f9f9; 
+}
+
+.banner-image img {
+    height: 100%;
+    object-fit: cover; 
+}
+
+.banner-text {
+    padding-left: 20px;
+    justify-content: center;
+}
+
+.banner-text p {
+    color: #555; 
+}
+
+.review-section {
+    background-color: #f8e1d4;
+}
+
+.review-section h2 {
+    color: #333333;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    margin: 0 auto 30px;
+}
+
+.review-slider{
+    margin: 0 auto;
+    width: 75%;
+}
+
+.review-slider .slick-slide img{
+    display: inline;
+}
+
+.review-item{
+    align-items: center;
+}
+
+.review-item h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 16px;
+    line-height: normal;
+    padding: 0;
+    color: #333333;
+}
+
+.review-item p {
+    text-align: center;
+    color: #777777;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.review-image {
+    border-radius: 50%;
+    width: 100px; 
+    height: 100px;
+}
+.brand-section h2 {
+    color: #333;
+}
+
+.brand-slider-container {
+    overflow-x: auto; 
+    white-space: nowrap; 
+    padding-bottom: 10px; 
+}
+
+.brand-slider {
+    display: inline-flex;
+    gap: 20px;
+}
+
+.brand-item {
+    min-width: 150px;
+    height: 100px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.brand-item img {
+    max-height: 80%;
+    object-fit: contain;
+}

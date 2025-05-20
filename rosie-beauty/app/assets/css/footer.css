@@ -1,0 +1,28 @@
+.footer {
+    background-color: #F5F5F5;
+    margin: 0;
+}
+
+.main-footer{
+    justify-content: space-between;
+}
+
+.footer a {
+    color: #333333;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.left-support .svg-inline--fa{
+    color: #ffb9a4;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.support li{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.footer h3{
+    color: #a05139;
+}

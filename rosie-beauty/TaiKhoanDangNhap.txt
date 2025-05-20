@@ -1,0 +1,9 @@
+1. Admin:
+username: a13
+password: 123456789
+
+2. User:
+username: nva
+password: 123456789
+
+Hoặc có thể đăng ký mới

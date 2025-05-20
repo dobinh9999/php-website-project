@@ -1,0 +1,97 @@
+- Những vấn đề chưa được giải quyết:
+ 1. manage-brands : chưa hoàn thành phần update
+    + Khi update brand, không update được logo
+        // Lấy logo cũ từ cơ sở dữ liệu
+        $stmt = $conn->prepare("SELECT logo_url FROM brands WHERE brand_id = ?");
+        $stmt->bind_param("i", $brand_id);
+        $stmt->execute();
+        $stmt->bind_result($old_logo);
+        $stmt->fetch();
+        $stmt->close();
+
+        // Xóa logo cũ nếu nó tồn tại
+        if (file_exists($old_logo)) {
+            unlink($old_logo); // Xóa file logo cũ
+        }else{
+            echo "Không tồn tại file logo cũ";
+            exit();
+        }   
+    + Trường hợp chỉ update brand_name, không update logo
+ 2. Phần đăng ký
+    + Vẫn chưa làm được kiểu thông báo luôn lỗi là username hay email đã tồn tại
+
+ 3. Phần header
+    + Khi hover vào icon user hiển thị dropdown menu, trong dropdown menu đó có các chức năng là 
+      vào trang detail account và đăng xuất
+    
+ 4. Update thêm phần upload file
+    + Chia ra các thư mục con ví dụ như upload ảnh cho sản phẩm, ảnh cho brand, ảnh cho user
+
+ 5. Phần xử lý lỗi khi đăng nhập hoặc đăng ký không thành công 
+
+ 6. Trong productDetail.php
+    + Đang bị lỗi hai nút increase và decrease
+
+7. Phần accountDetail.php
+    + Chưa hoàn thành phần update. Khi thêm chi tiết tài khoản lần đầu tiên
+    thì ok. Nhưng nếu lần sau , người dùng muốn cập nhật lại thì chưa xử lý phần đó
+
+8. Ở phần cart
+ Khi mà đã chọn các sản phẩm để thanh toán và tổng tiền cũng được
+ hiện ra nhưng khi click tăng / giảm số lượng 1 sản phẩm
+ nào đó thì tổng tiền chưa được cập nhật lại
+
+ 9. Trạng thái đơn hàng
+
+ 10. Ở phần promotion
+    Vì MySQL không hỗ trợ triggers để tự động xóa bản ghi theo thời gian nên chưa làm được
+    phần tự động xóa promotion khi promotion đó hết hạn
+
+11. Phần overlay trong promotion
+     <div class="overlay">
+        <a href="#" class="buy-now">Mua ngay</a>
+        <a href="#" class="cart-icon">🛒</a>
+    </div>
+
+    /* .promotion-image {
+    position: relative;
+} */
+
+
+/* .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.image:hover .overlay {
+    opacity: 1; 
+}
+
+.buy-now, .cart-icon {
+    color: white;
+    margin: 10px; 
+    text-decoration: none;
+    transform: translateY(20px); 
+    transition: transform 0.3s; 
+}
+
+.image:hover .buy-now,
+.image:hover .cart-icon {
+    transform: translateY(0); 
+} */
+
+12. Trong bảng promotion thêm 1 trường nữa là promotion_img
+
+13. Tạo trigger khi mua sản phẩm nào đó sẽ trừ đi số lượng của sản phẩm đó trong bảng product_detail
+
+/* box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.22); */

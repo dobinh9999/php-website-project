@@ -1,0 +1,38 @@
+.service-container {
+    justify-content: space-between;
+    background-color: #FFF5F5;
+}
+
+.product-showcase {
+    margin-left: 50px;
+}
+
+.service-features {
+    width: 30%;
+    background-color: #FFF;
+}
+    
+.feature {
+    align-items: center;
+    background-color: #FFECE1;
+    margin-bottom: 10px;
+    width: 350px;
+}
+
+.feature-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    padding: 15px;
+}
+
+.feature-text h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.feature-text p {
+    font-size: 0.9em;
+    color: #666;
+}
